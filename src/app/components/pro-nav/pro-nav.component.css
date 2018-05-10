@@ -10,3 +10,7 @@
 .title {
     font-family: 'Pacifico', cursive;
 }
+
+img {
+    vertical-align: middle;
+}

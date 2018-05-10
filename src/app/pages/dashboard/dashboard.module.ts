@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CardComponent } from '../../components/card/card.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     DashboardRoutingModule,
     FlexLayoutModule
   ],
-  declarations: [DashboardComponent]
+  declarations: [DashboardComponent, CardComponent]
 })
 export class DashboardModule {}

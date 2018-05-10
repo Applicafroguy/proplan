@@ -1,0 +1,45 @@
+.dashboard {
+    margin: 50px;
+    h1 {
+        font-size: 72px;
+        font-weight: 100;
+        margin: 0;
+    }
+    .proposal-cards-wrap {
+        h3 {
+            font-size: 16px;
+            font-weight: 100;
+        }
+        .proposal-cards {
+            .proposal-card {
+                max-height: 80px;
+                min-height: 80px;
+                width: 100%;
+                background: #fff;
+                border-right: #ED8787 solid 8px;
+                span {
+                    font-size: 16px;
+                }
+                .project-name {
+                    padding-left: 25px;
+                }
+                .client-name {
+                    color: #828282;
+                }
+                .project-state {
+                    text-align: right;
+                    padding-right: 20px;
+                    color: #ED8787;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    #fab {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}

@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import '~@angular/cdk/a11y-prebuilt.css';
 html,
 body {
     margin: 0;
@@ -14,4 +16,9 @@ body {
 .container {
     margin: 0 auto;
     max-width: 1000px !important;
+}
+
+.panelClass {
+    position: absolute;
+    right: 0;
 }

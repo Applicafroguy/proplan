@@ -13,6 +13,7 @@ import {
   MatListModule
 } from '@angular/material';
 import { ProNavComponent } from './components/pro-nav/pro-nav.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, ProNavComponent],
@@ -25,7 +26,8 @@ import { ProNavComponent } from './components/pro-nav/pro-nav.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

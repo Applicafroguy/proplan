@@ -1,0 +1,64 @@
+.add-prop {
+    h1 {
+        font-size: 50px;
+        font-weight: 100;
+    }
+    form {
+        min-width: 350px;
+        max-width: 500px;
+        width: 100%;
+        mat-form-field {
+            width: 100%;
+        }
+    }
+    .with-side {
+        max-width: 100%;
+        .predef {
+            border: #E0E0E0 1px solid;
+            padding: 10px;
+            padding-bottom: 0;
+            .title {
+                width: 570px;
+            }
+            .statement {
+                background: #C4C4C4;
+                padding: 10px;
+                margin-bottom: 10px;
+                p {
+                    margin: 0;
+                    color: #4F4F4F;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background: rgb(235, 233, 233);
+                }
+            }
+        }
+        .list {
+            border: #E0E0E0 1px solid;
+            .more {
+                padding: 10px;
+            }
+            hr {
+                border-color: #E0E0E0;
+            }
+            .conte {
+                padding: 10px;
+                padding-bottom: 0;
+                .statement {
+                    background: #C4C4C4;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    p {
+                        margin: 0;
+                        color: #4F4F4F;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        background: rgb(235, 233, 233);
+                    }
+                }
+            }
+        }
+    }
+}

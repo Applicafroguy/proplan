@@ -57,8 +57,12 @@
                         "browserTarget": "proplan:build"
                     },
                     "configurations": {
+
                         "production": {
                             "browserTarget": "proplan:build:production"
+                        },
+                        "hmr": {
+                            "hmr": true
                         }
                     }
                 },
@@ -124,5 +128,8 @@
             }
         }
     },
-    "defaultProject": "proplan"
+    "defaultProject": "proplan",
+    "cli": {
+        "packageManager": "yarn"
+    }
 }

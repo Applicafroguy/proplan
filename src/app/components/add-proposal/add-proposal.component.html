@@ -25,7 +25,7 @@
                         </mat-form-field>
                     </div>
 
-                    <div>
+                    <div class="action">
                         <button mat-raised-button matStepperNext>Continue</button>
                     </div>
                 </form>
@@ -44,7 +44,7 @@
                             <textarea matInput placeholder="Project Goals" formControlName="secondCtrl" required></textarea>
                         </mat-form-field>
                     </div>
-                    <div>
+                    <div class="action">
                         <button mat-raised-button matStepperPrevious>Back</button>
                         <button mat-raised-button matStepperNext>Continue</button>
                     </div>
@@ -53,7 +53,7 @@
             <mat-step [stepControl]="secondFormGroup">
                 <form [formGroup]="secondFormGroup" class="with-side">
                     <ng-template matStepLabel>WHY WORK WITH ME</ng-template>
-                    <div fxLayout="row" fxLayoutGap="20px">
+                    <div class="wdt" fxLayout="row" fxLayoutGap="20px">
                         <div fxFlex="70">
                             <div class="predef">
                                 <div class="title">
@@ -62,10 +62,12 @@
                                     </p>
                                 </div>
                                 <hr>
-                                <div class="statement" (click)="addToAboutList(i, me)" *ngFor="let me of _listAboutMe; let i = index">
-                                    <p>
-                                        {{ me.description}}
-                                    </p>
+                                <div class="content">
+                                    <div class="statement" (click)="addToAboutList(i, me)" *ngFor="let me of _listAboutMe; let i = index">
+                                        <p>
+                                            {{ me.description}}
+                                        </p>
+                                    </div>
                                 </div>
 
                             </div>
@@ -85,7 +87,126 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="action">
+                        <button mat-raised-button matStepperPrevious>Back</button>
+                        <button mat-raised-button matStepperNext>Continue</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup" class="with-side">
+                    <ng-template matStepLabel>DELIVERABLES</ng-template>
+                    <div fxLayout="row" fxLayoutGap="20px">
+                        <div fxFlex="70">
+                            <div class="predef">
+                                <div class="title">
+                                    <p>
+                                        Selected
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="content">
+                                    <div fxLayout="row" fxLayoutGap="10px" class="statement borders" (click)="addToDeliverList(i, me)" *ngFor="let me of _listDeliver; let i = index">
+                                        <div class="mr10 br" fxFlex="70">
+                                            <p>
+                                                {{ me.title}}
+                                            </p>
+                                        </div>
+                                        <div class="mr10 mr-10" fxFlex="30">
+                                            <p>
+                                                {{ me.price}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="totals">
+                                    <div class="dis-box" fxLayout="row">
+                                        <div class="mr10 br" fxFlex="70">
+                                            <span>Discount</span>
+                                        </div>
+                                        <div class="mr10 tax" fxFlex="30">
+                                            <mat-checkbox>Tax Included</mat-checkbox>
+                                        </div>
+                                    </div>
+                                    <div fxLayout="row">
+                                        <div class="mtb10" fxFlex="70">
+                                            <span>TOTAL</span>
+                                        </div>
+                                        <div class="mtb10 total-price" fxFlex="30">
+                                            <span>R2000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div fxFlex="30">
+                            <div class="list">
+                                <div class="more">
+                                    + Add More
+                                </div>
+                                <hr>
+                                <div class="conte">
+                                    <div (click)="addDeliver(i,del)" class="statement" *ngFor="let del of listDeliver; let i = index">
+                                        <p>{{del.title}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action">
+                        <button mat-raised-button matStepperPrevious>Back</button>
+                        <button mat-raised-button matStepperNext>Continue</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup" class="with-side">
+                    <ng-template matStepLabel>MILESTONES</ng-template>
+                    <div fxLayout="row" fxLayoutGap="20px">
+                        <div fxFlex="70">
+                            <div class="predef">
+                                <div class="title">
+                                    <p>
+                                        Selected
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="content">
+                                    <div fxLayout="row" fxLayoutGap="10px" class="statement borders" (click)="addToMileList(i, me)" *ngFor="let me of _listMile; let i = index">
+                                        <div class="mr10 br" fxFlex="70">
+                                            <p>
+                                                {{ me.title}}
+                                            </p>
+                                        </div>
+                                        <div class="mr10 mr-10" fxFlex="30">
+                                            <p>
+                                                {{ me.time}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div fxFlex="30">
+                            <div class="list">
+                                <div class="more">
+                                    + Add More
+                                </div>
+                                <hr>
+                                <div class="conte">
+                                    <div (click)="addMile(i,mil)" class="statement" *ngFor="let mil of listMile; let i = index">
+                                        <p>{{mil.title}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action">
                         <button mat-raised-button matStepperPrevious>Back</button>
                         <button mat-raised-button matStepperNext>Continue</button>
                     </div>
@@ -94,9 +215,9 @@
             <mat-step>
                 <ng-template matStepLabel>Done</ng-template>
                 You are now done.
-                <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button (click)="stepper.reset()">Reset</button>
+                <div class="action">
+                    <button mat-raised-button matStepperPrevious>Back</button>
+                    <button mat-raised-button (click)="create()" [routerLink]="['/proposal']">Create Proposal</button>
                 </div>
             </mat-step>
         </mat-vertical-stepper>

@@ -8,7 +8,8 @@ import {
   MatIconModule,
   MatDialogModule,
   MatStepperModule,
-  MatInputModule
+  MatInputModule,
+  MatCheckboxModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardComponent } from '../../components/card/card.component';
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatStepperModule,
     DashboardRoutingModule,
     ReactiveFormsModule,
+    MatCheckboxModule,
     MatInputModule
   ],
   declarations: [DashboardComponent, CardComponent, AddProposalComponent],

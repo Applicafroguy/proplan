@@ -11,12 +11,45 @@
             width: 100%;
         }
     }
+    .action {
+        margin-top: 15px;
+        button:nth-child(1) {
+            margin-right: 10px
+        }
+    }
+    .br {
+        border-right: #E0E0E0 1px solid;
+    }
+    .mr10 {
+        padding: 10px;
+    }
+    .mr-10 {
+        padding-left: 0;
+    }
+    .mtb10 {
+        padding: 10px 0;
+    }
+    hr {
+        background-color: #E0E0E0;
+        height: 1px;
+        border: none;
+    }
+    .wdt {
+        width: 100%;
+    }
     .with-side {
         max-width: 100%;
         .predef {
+            hr {
+                margin: 0 -10px;
+                margin-bottom: 10px;
+            }
             border: #E0E0E0 1px solid;
             padding: 10px;
             padding-bottom: 0;
+            .content {
+                min-height: 270px;
+            }
             .title {
                 width: 570px;
             }
@@ -31,6 +64,26 @@
                 &:hover {
                     cursor: pointer;
                     background: rgb(235, 233, 233);
+                }
+            }
+            .statement.borders {
+                padding: 0;
+                background: transparent;
+                border: #E0E0E0 1px solid;
+            }
+            .totals {
+                .dis-box {
+                    border-bottom: #E0E0E0 1px solid;
+                    border-top: #E0E0E0 1px solid;
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    ;
+                    .tax {
+                        text-align: right;
+                    }
+                }
+                .total-price {
+                    text-align: right;
                 }
             }
         }

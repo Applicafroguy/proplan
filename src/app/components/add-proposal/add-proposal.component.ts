@@ -38,6 +38,25 @@ export class AddProposalComponent implements OnInit {
     }
   ];
   _listAboutMe = [];
+
+  listDeliver = [
+    {
+      id: 1,
+      title: 'Hosting',
+      price: 200
+    }
+  ];
+
+  _listDeliver = [];
+  listMile = [
+    {
+      id: 1,
+      title: 'Kickoff Meeting',
+      time: '3 days'
+    }
+  ];
+
+  _listMile = [];
   constructor(
     public dialogRef: MatDialogRef<AddProposalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -71,5 +90,44 @@ export class AddProposalComponent implements OnInit {
   addToAboutList(i, me) {
     this.listAboutMe.push(me);
     this.removeAboutMeTemp(i);
+  }
+
+  // deli
+  addDeliver(index, me) {
+    this._listDeliver.push(me);
+    this.removeDeliver(index);
+  }
+  removeDeliver(i) {
+    this.listDeliver.splice(i, 1);
+  }
+  removeDeliverTemp(i) {
+    this._listDeliver.splice(i, 1);
+  }
+
+  addToDeliverList(i, me) {
+    this.listDeliver.push(me);
+    this.removeDeliverTemp(i);
+  }
+
+  // milestone
+  addMile(index, me) {
+    this._listMile.push(me);
+    this.removeMile(index);
+  }
+  removeMile(i) {
+    this.listMile.splice(i, 1);
+  }
+  removeMileTemp(i) {
+    this._listMile.splice(i, 1);
+  }
+
+  addToMileList(i, me) {
+    this.listMile.push(me);
+    this.removeMileTemp(i);
+  }
+
+  //
+  create() {
+    this.dialogRef.close();
   }
 }

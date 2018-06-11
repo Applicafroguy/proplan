@@ -10,10 +10,12 @@ import {
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatMenuModule
 } from '@angular/material';
 import { ProNavComponent } from './components/pro-nav/pro-nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddProposalComponent } from './components/add-proposal/add-proposal.component';
 
 @NgModule({
   declarations: [AppComponent, ProNavComponent],
@@ -25,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    MatMenuModule,
     MatIconModule,
     MatListModule,
     ReactiveFormsModule

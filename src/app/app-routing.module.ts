@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: './pages/proposal#ProposalModule'
   },
   {
+    path: 'settings',
+    loadChildren: './pages/settings#SettingsModule'
+  },
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full'

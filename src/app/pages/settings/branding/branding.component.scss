@@ -1,0 +1,25 @@
+.branding {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    p {
+        font-size: 13px;
+        color: #8d8d8d;
+    }
+    .company-logo-wrap {
+        margin-top: 40px;
+        .company-logo {
+            border: 2px solid #fff;
+            padding: 3px;
+            border-radius: 1px;
+            display: inline-block; // background: #fff;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        p {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    }
+}

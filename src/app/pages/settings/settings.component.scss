@@ -1,0 +1,27 @@
+.settings-menu {
+    background: #34495E;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: calc(100vh - 64px);
+    width: 100%;
+    color: #fff;
+    font-size: 13px;
+    .title {
+        color: #8d8d8d;
+        padding: 40px 15px;
+        padding-bottom: 10px;
+    }
+    li {
+        border-bottom: #28292c solid 1px;
+        padding: 13px 15px;
+        .list-item {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    .list-hover:hover {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.548);
+    }
+}

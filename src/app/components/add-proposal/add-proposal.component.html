@@ -10,18 +10,18 @@
     <div>
         <h1>CREATE PROPOSAL</h1>
         <mat-vertical-stepper [linear]="isLinear" #stepper>
-            <mat-step [stepControl]="firstFormGroup">
-                <form [formGroup]="firstFormGroup">
+            <mat-step [stepControl]="clientFormGroup">
+                <form [formGroup]="clientFormGroup">
                     <ng-template matStepLabel>CLIENT DETAILS</ng-template>
                     <div fxLayout="column" fxLayoutGap="20px">
                         <mat-form-field>
-                            <input matInput placeholder="Contact Name" formControlName="firstCtrl" required>
+                            <input matInput placeholder="Contact Name" formControlName="name" required>
                         </mat-form-field>
                         <mat-form-field>
-                            <input matInput placeholder="Company/ Organisation Name " formControlName="firstCtrl" required>
+                            <input matInput placeholder="Company/ Organisation Name " formControlName="company" required>
                         </mat-form-field>
                         <mat-form-field>
-                            <textarea matInput placeholder="Company/ Organisation Description " formControlName="firstCtrl" required></textarea>
+                            <textarea matInput placeholder="Company/ Organisation Description " formControlName="description" required></textarea>
                         </mat-form-field>
                     </div>
 
@@ -30,18 +30,18 @@
                     </div>
                 </form>
             </mat-step>
-            <mat-step [stepControl]="secondFormGroup">
-                <form [formGroup]="secondFormGroup">
+            <mat-step [stepControl]="projectFormGroup">
+                <form [formGroup]="projectFormGroup">
                     <ng-template matStepLabel>PROJECT DETAILS</ng-template>
                     <div fxLayout="column" fxLayoutGap="20px">
                         <mat-form-field>
-                            <input matInput placeholder="Project Name" formControlName="secondCtrl" required>
+                            <input matInput placeholder="Project Name" formControlName="name" required>
                         </mat-form-field>
                         <mat-form-field>
-                            <input matInput placeholder="Project Description" formControlName="secondCtrl" required>
+                            <input matInput placeholder="Project Description" formControlName="description" required>
                         </mat-form-field>
                         <mat-form-field>
-                            <textarea matInput placeholder="Project Goals" formControlName="secondCtrl" required></textarea>
+                            <textarea matInput placeholder="Project Goals" formControlName="goals" required></textarea>
                         </mat-form-field>
                     </div>
                     <div class="action">
@@ -50,8 +50,8 @@
                     </div>
                 </form>
             </mat-step>
-            <mat-step [stepControl]="secondFormGroup">
-                <form [formGroup]="secondFormGroup" class="with-side">
+            <mat-step [stepControl]="meFormGroup">
+                <form [formGroup]="meFormGroup" class="with-side">
                     <ng-template matStepLabel>WHY WORK WITH ME</ng-template>
                     <div class="wdt" fxLayout="row" fxLayoutGap="20px">
                         <div fxFlex="70">
@@ -93,8 +93,8 @@
                     </div>
                 </form>
             </mat-step>
-            <mat-step [stepControl]="secondFormGroup">
-                <form [formGroup]="secondFormGroup" class="with-side">
+            <mat-step [stepControl]="deliverFormGroup">
+                <form [formGroup]="deliverFormGroup" class="with-side">
                     <ng-template matStepLabel>DELIVERABLES</ng-template>
                     <div fxLayout="row" fxLayoutGap="20px">
                         <div fxFlex="70">
@@ -161,8 +161,8 @@
                     </div>
                 </form>
             </mat-step>
-            <mat-step [stepControl]="secondFormGroup">
-                <form [formGroup]="secondFormGroup" class="with-side">
+            <mat-step [stepControl]="mileFormGroup">
+                <form [formGroup]="mileFormGroup" class="with-side">
                     <ng-template matStepLabel>MILESTONES</ng-template>
                     <div fxLayout="row" fxLayoutGap="20px">
                         <div fxFlex="70">

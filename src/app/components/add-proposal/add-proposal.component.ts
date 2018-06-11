@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'proplan-add-proposal',
@@ -8,8 +8,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-proposal.component.scss']
 })
 export class AddProposalComponent implements OnInit {
-  isLinear = false;
-  firstFormGroup: FormGroup;
+  isLinear = true;
+  clientFormGroup: FormGroup;
+  projectFormGroup: FormGroup;
+  meFormGroup: FormGroup;
+  deliverFormGroup: FormGroup;
+  mileFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   listAboutMe = [
     {
@@ -57,6 +61,7 @@ export class AddProposalComponent implements OnInit {
   ];
 
   _listMile = [];
+
   constructor(
     public dialogRef: MatDialogRef<AddProposalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -68,16 +73,33 @@ export class AddProposalComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
+    this.clientFormGroup = this._formBuilder.group({
+      name: ['', Validators.required],
+      company: ['', Validators.required],
+      description: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
+    });
+    this.projectFormGroup = this._formBuilder.group({
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+      goals: ['', Validators.required]
+    });
+    this.meFormGroup = this._formBuilder.group({
+      description: ['', Validators.required]
+    });
+    this.deliverFormGroup = this._formBuilder.group({
+      description: ['', Validators.required]
+    });
+    this.mileFormGroup = this._formBuilder.group({
+      description: ['', Validators.required]
     });
   }
 
   addAboutMe(index, me) {
     this._listAboutMe.push(me);
+    this.meFormGroup.setValue({ description: me });
     this.removeAboutMe(index);
   }
   removeAboutMe(i) {
@@ -93,8 +115,9 @@ export class AddProposalComponent implements OnInit {
   }
 
   // deli
-  addDeliver(index, me) {
-    this._listDeliver.push(me);
+  addDeliver(index, deliver) {
+    this._listDeliver.push(deliver);
+    this.deliverFormGroup.setValue({ description: deliver });
     this.removeDeliver(index);
   }
   removeDeliver(i) {
@@ -112,6 +135,7 @@ export class AddProposalComponent implements OnInit {
   // milestone
   addMile(index, me) {
     this._listMile.push(me);
+    this.mileFormGroup.setValue({ description: me });
     this.removeMile(index);
   }
   removeMile(i) {

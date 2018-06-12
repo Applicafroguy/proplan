@@ -2,14 +2,14 @@
     <div fxFlex="18">
         <ul class="settings-menu mat-elevation-z2">
             <li class="title">GENERAL</li>
-            <li [routerLink]="['profile']" class="list-hover">
+            <li routerLinkActive="active" [routerLink]="['profile']" class="list-hover">
                 <a class="list-item">Profile</a>
             </li>
             <li class="title">WORKSPACE</li>
-            <li class="list-hover" [routerLink]="['branding']">
+            <li routerLinkActive="active" class="list-hover" [routerLink]="['branding']">
                 <a class="list-item">Branding</a>
             </li>
-            <li class="list-hover" [routerLink]="['branding']">
+            <li routerLinkActive="active" class="list-hover" [routerLink]="['brandings']">
                 <a class="list-item">Intergration</a>
             </li>
         </ul>

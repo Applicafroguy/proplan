@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddProposalComponent } from '../../components/add-proposal/add-proposal.component';
-import { MatDialog, DialogPosition } from '@angular/material';
+import { MatDialog, DialogPosition } from '@angular/material/dialog';
 
 @Component({
   selector: 'proplan-dashboard',

@@ -6,7 +6,7 @@ import { SettingsComponent } from './settings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BrandingComponent } from './branding/branding.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
